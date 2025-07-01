@@ -1,4 +1,4 @@
-
+import { Temp3 } from './temp'
 
 function App() {
 
@@ -7,7 +7,8 @@ function App() {
 
   return (
     <>
-      <h1> App Function | {username}</h1>
+      /* <h1> App Function | {username}</h1> */
+      <Temp3 />
     </>
   )
 }

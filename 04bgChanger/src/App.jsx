@@ -3,6 +3,10 @@ import { useState } from 'react'
 function App() {
   const [color, setColor] = useState("olive")
 
+  function changeRed(){
+    setColor("red")
+  }
+
   return (
       <div className='w-full h-screen duration-200'
       style={{backgroundColor: color}}
@@ -11,7 +15,7 @@ function App() {
           <div className='flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2 rounded-xl'>
 
             <button 
-            onClick={() => setColor("red")}
+            onClick={changeRed}
             className='outline-none px-4 py-1 rounded-xl text-white shadow-lg'
             style={{backgroundColor: "red"}}
             >Red</button>

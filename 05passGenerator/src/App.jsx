@@ -28,11 +28,11 @@ function App() {
 
   }, [length, number, char])
 
-  const copyPassword = () => {
+  const copyPassword = useCallback(() => {
     passwordRef.current?.select();
-    passwordRef.current?.setSelectionRange(0,20);
+    //passwordRef.current?.setSelectionRange(0,20);
     window.navigator.clipboard.writeText(password)
-  }
+  }, [password])
 
 // passwordGenerator() //Not the right way to call
 
