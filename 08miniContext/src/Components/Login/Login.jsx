@@ -4,33 +4,35 @@ import UserContext from '../../Context/UserContext'
 
 function Login() {
 
-    const [username, setUserame] = useState("")
-    const [password, setPassword] = useState("")
+  const [username, setUserame] = useState("")
+  const [password, setPassword] = useState("")
 
-    const {setUser} = useContext(UserContext)
+  const { setUser } = useContext(UserContext)
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        setUser({username, password})
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setUser({ username, password })
+    setUser(prev => ({ ...prev, uname: "Suketu" }));
+    setUser(prev => prev.map(({ uname, ...rest }) => rest));
+  }
 
   return (
     <div>
-        <h2>Login</h2>
+      <h2>Login</h2>
 
-        <input type="text"
-        value={username} 
+      <input type="text"
+        value={username}
         onChange={(e) => setUserame(e.target.value)}
         name="username" />
 
-        { " "}
+      {" "}
 
-        <input type="text" 
-        value={password} 
+      <input type="text"
+        value={password}
         onChange={(e) => setPassword(e.target.value)}
         name="password" />
 
-        <button onClick={handleSubmit}>Submit</button>
+      <button onClick={handleSubmit}>Submit</button>
     </div>
   )
 }
