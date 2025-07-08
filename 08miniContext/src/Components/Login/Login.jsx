@@ -12,7 +12,7 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault()
     setUser({ username, password })
-    setUser(prev => ({ ...prev, uname: "Suketu" }));
+    setUser(prev => ({ ...prev, uname: "Ayush" }));
     setUser(prev => prev.map(({ uname, ...rest }) => rest));
   }
 
