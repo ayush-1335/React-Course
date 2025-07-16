@@ -22,7 +22,7 @@ export class AuthServies {
                 return userAccount
             }
         } catch (error) {
-            throw error;
+            console.log("Appwrite servies :: createAccount :: error", error)
         }
     }
 
@@ -30,7 +30,7 @@ export class AuthServies {
         try {
             return await this.account.createEmailPasswordSession(email, password)
         } catch (error) {
-            throw error
+            console.log("Appwrite servies :: login :: error", error)
         }
     }
 
